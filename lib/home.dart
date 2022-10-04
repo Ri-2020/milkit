@@ -10,13 +10,13 @@ class HomeScreen extends StatelessWidget {
     return GetBuilder<HomeScreenVM>(builder: (vm) {
       return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          enableFeedback: true,
+          // enableFeedback: true,
           currentIndex: vm.currentIndex.value,
           onTap: (index) {
             vm.currentIndex.value = index;
             vm.update();
           },
-          type: BottomNavigationBarType.fixed,
+          // type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.spa_rounded),
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: AppRoutes.pages[vm.currentIndex.value].page(),
+        // body: AppRoutes.pages[vm.currentIndex.value].page(),
       );
     });
   }
